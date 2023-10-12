@@ -7,10 +7,10 @@ function randomValueFromArray(array){
   return array[random];
 }
 
-const storyText = 'さいたまは摂氏212度で,暑かった. :insertx: は散歩に出かけた. しばらくして :inserty:　に到着したが, 彼らは目を見合わせて, それから :insertz:. 事の顛末を見たが, 驚かなかった. — :insertx: Bob は目を覚まし, そしてそれは夢だったと気づいた.';
+const storyText = 'さいたまは摂氏212度で,暑かった. :insertx: は散歩に出かけた. しばらくして :inserty:　に到着したが, 彼らは目を見合わせて, それから :insertz:. Bob は事の顛末を見たが, 驚かなかった. — :insertx: は目を覚まし, そしてそれは夢だったと気づいた.';
 const insertX = ['えのき', 'エリンギ', 'まいたけ'];
 const insertY = ['鬼ヶ島', '竜宮城', '軍艦島'];
-const insertZ = ['100回腹筋した', '200回背筋した, '300回スクワットした'];
+const insertZ = ['100回 腹筋した', '200回 背筋した, '300 回スクワットした'];
 
 randomize.addEventListener('click', result);
 
@@ -31,11 +31,11 @@ function result() {
     newStory = newStory.replace('Bob', name);
   }
 
-  if (document.getElementById("uk").checked) {
+  if (document.getElementById("日本語").checked) {
     const weight = `${Math.round(300*0.0714286)} stone`;
     const temperature =  `${Math.round((94-32) * 5 / 9)} centigrade`;
     newStory = newStory.replace('94 fahrenheit', temperature);
-    newStory = newStory.replace('300 pounds', weight);
+    newStory = newStory.replace('300 回', 億回);
   }
 
   story.textContent = newStory;
